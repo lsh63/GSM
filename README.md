@@ -1,5 +1,5 @@
 # GSM
-gradle+springboot+mybatis <br>
+gradle+springboot+jpa <br>
 
 ![Screenshot from running application](etc/images/file.jpg?raw=true "file")
 
