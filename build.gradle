@@ -1,0 +1,62 @@
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+//依赖来源  
+repositories {  
+    mavenLocal()
+    mavenCentral()
+}
+
+//依赖
+dependencies {
+	//（必须在setting.gradle中include）
+    compile project(':test-one-sup')
+    compile project(':test-one-dto')
+    compile project(':test-one-api')
+    compile project(':test-one-app')
+    
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'junit:junit:4.12'  
+}
+
+
+//适用所有项目
+allprojects {
+	group 'com.xxx' //指定组
+	version '1.0-SNAPSHOT' //指定版本号
+}
+
+
+//适用所有子项目
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+	
+	//jdk编译版本
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+   
+	//依赖包版本
+	ext {
+        junitVersion = "4.12"
+        springBootVersion = "1.5.3.RELEASE"
+	}
+	
+	repositories {
+		mavenCentral()
+		mavenLocal()
+	}
+   
+	dependencies {
+        //junit
+        testCompile "junit:junit:${junitVersion}"
+    }
+    
+    //编码乱码
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+}
+

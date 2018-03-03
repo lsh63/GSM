@@ -1,0 +1,19 @@
+apply plugin: 'org.springframework.boot'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+//添加编译时的依赖
+dependencies {
+
+	compile project(":test-one-dto")
+    compile project(":test-one-api")
+    
+}
