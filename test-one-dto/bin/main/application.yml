@@ -1,0 +1,6 @@
+spring:  
+  data:  
+    mongodb:  
+      host: 172.30.0.218  
+      port: 27017  
+      database: mydb

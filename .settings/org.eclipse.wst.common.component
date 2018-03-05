@@ -15,5 +15,8 @@
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/test-one-dto/test-one-dto">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/test-one-jwt/test-one-jwt">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
 	</wb-module>
 </project-modules>

@@ -11,5 +11,6 @@ rootProject.name = 'test-one'
 
 include 'test-one-sup'
 include 'test-one-dto'
+include 'test-one-jwt'
 include 'test-one-api'
 include 'test-one-app'
