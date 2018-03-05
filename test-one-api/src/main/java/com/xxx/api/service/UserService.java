@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.xxx.dto.user.User;
-import com.xxx.sup.dao.UserDao;
+import com.xxx.api.dao.UserDao;
+import com.xxx.jwt.dto.User;
 
 @Service
 public class UserService {

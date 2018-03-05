@@ -1,4 +1,4 @@
-package com.xxx.app.web;
+package com.xxx.app.user.web;
 
 public class UserController {
 
