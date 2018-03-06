@@ -7,4 +7,7 @@ project文件结构图如下：<br>
 
 eclipse运行效果图如下：<br>
 
-![Screenshot from running application](etc/images/eclipse.jpg?raw=true "file")
+![Screenshot from running application](etc/images/eclipse.jpg?raw=true "file") <br>
+
+@EntityScan("com.xxx.*") <br>
+@ComponentScan("com.xxx.api.dao")
